@@ -52,7 +52,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "28da5f85-3283-40ca-a086-471741eec3a0",
+      "id": "c5efa6de-db75-408c-86e5-7b31427551cc",
       "comment": "",
       "command": "verifyElementPresent",
       "target": "css=.header-logo img",
