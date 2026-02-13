@@ -9,22 +9,11 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.webdriver.firefox.service import Service
-from selenium.webdriver.firefox.options import Options
-from webdriver_manager.firefox import GeckoDriverManager
-
 
 class TestSmoketest():
   def setup_method(self, method):
-    options = Options()
-    options.add_argument("--disable-gpu")
-    # options.add_argument("--headless")  # optional (run without opening browser)
-
-    service = Service(GeckoDriverManager().install())
-
-    self.driver = webdriver.Firefox(service=service, options=options)
+    self.driver = webdriver.Firefox()
     self.vars = {}
-
   
   def teardown_method(self, method):
     self.driver.quit()
